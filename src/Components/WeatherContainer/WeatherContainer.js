@@ -7,14 +7,14 @@ const WeatherContainer = () => {
     const format = (value) => {
         return value.map(obj => {
             return (
-              <NavLink to="/details">
+              <NavLink to={`/${obj.number}`} key={obj.number}>
                 <WeatherCard
                 name= {obj.name}
                 temp= {obj.temperature}
+                icon= {obj.icon}
                 windSpeed= {obj.windSpeed}
                 windDirection= {obj.windDirection}
                 shortForecast= {obj.shortForecast}
-                key={obj.number}
                 />
               </NavLink>
 

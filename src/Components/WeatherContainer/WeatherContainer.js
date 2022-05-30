@@ -1,11 +1,18 @@
 import React from "react";
 import { weatherContext } from "../../App";
+import  WeatherCard  from "../WeatherCard/WeatherCard"
 
 const WeatherContainer = () => {
     const format = (value) => {
         return value.map(obj => {
             return (
-                <h2>{obj.name}</h2>
+                <WeatherCard
+                name= {obj.name}
+                temp= {obj.temperature}
+                windSpeed= {obj.windSpeed}
+                windDirection= {obj.windDirection}
+                shortForecast= {obj.shortForecast}/>
+
             )
         })
     }

@@ -23,9 +23,14 @@ const WeatherContainer = () => {
     }
 
     return (
+      <>
+        <NavLink to="/24-hours">
+          <button className="24hr-btn">Next 24Hrs</button>
+        </NavLink>
         <weatherContext.Consumer>
             {value => format(value)}
         </weatherContext.Consumer>
+      </>
     )
 }
 

@@ -3,6 +3,7 @@ import React, { Component, createContext } from 'react';
 import { Route } from 'react-router-dom';
 import WeatherContainer from './Components/WeatherContainer/WeatherContainer';
 import WeatherDetails from './Components/WeatherDetails/WeatherDetails';
+import Navbar from './Components/Navbar/Navbar';
 
 export let weatherContext;
 export let hourlyLinkContext;
@@ -36,6 +37,7 @@ class App extends Component {
     weatherContext = createContext(this.state.forecast)
     return (
       <>
+      <Navbar />
       <Route exact path='/' render = {() =>
       <div className="App">
         <WeatherContainer />

@@ -5,11 +5,14 @@ import WeatherContainer from './Components/WeatherContainer/WeatherContainer';
 import WeatherDetails from './Components/WeatherDetails/WeatherDetails';
 import Navbar from './Components/Navbar/Navbar';
 import AQI from './Components/AQI/AQI';
-import { fetchAirQuality } from './apiCalls';
+import Form from './Components/Form/Form';
+import { fetchAirQuality, fetchCityData } from './apiCalls';
 
 export let weatherContext;
 export let hourlyLinkContext;
 export let airContext;
+export let cityContext;
+// export let handleChoiceContext;
 
 
 class App extends Component {
@@ -17,10 +20,18 @@ class App extends Component {
     super()
     this.state = {
       forecast: [],
-      airData: 0
+      airData: 0,
+      cityData: []
     }
   }
   componentDidMount() {
+    fetchCityData().then(data => {
+      // console.log(data.data.states)
+      this.setState({
+        ...this.state,
+        cityData: data.data.states
+      })
+    })
     
     fetchAirQuality()
     .then(data=> this.setState({
@@ -45,15 +56,21 @@ class App extends Component {
       })
       }
 
+    handleUserChoice = (event, stateChoice, cityChoice) => {
+      event.preventDefault()
+      console.log('app fired', stateChoice, cityChoice)
+    }
 
       
   render () {
-
+    // handleChoiceContext = createContext(this.handleUserChoice)
+    cityContext = createContext(this.state.cityData)
     airContext = createContext(this.state.airData)  
     weatherContext = createContext(this.state.forecast)
     return (
       <>
       <Navbar />      
+      <Form handleUserChoice={this.handleUserChoice}/>
       <Route exact path='/' render = {() =>
       <>
       <AQI />

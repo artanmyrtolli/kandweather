@@ -14,7 +14,6 @@ fetchHourly = (value) => {
   fetch(value)
   .then(response => response.json())
   .then(data => {
-    console.log('Data',data.properties.periods)
       const filtered = data.properties.periods.filter((element, index) => index < 24).map(item => {
         return (
           <div key={item.number}>
@@ -38,7 +37,7 @@ fetchHourly = (value) => {
 
 
   render(){
-    console.log(this.props)
+
     return (
       <>
       {this.state.fetched ? "" :

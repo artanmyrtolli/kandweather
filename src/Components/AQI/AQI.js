@@ -3,7 +3,6 @@ import { airContext } from "../../App";
 import airQualityKey from '../../assets/images/airQualityKey.png'
 
 const AQI = () => {
-    console.log('aqi log', airContext)
     const format = (value) => {
         return (
             <>

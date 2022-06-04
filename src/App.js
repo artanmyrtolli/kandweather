@@ -51,6 +51,8 @@ class App extends Component {
           this.setState({
             ...this.state,
             forecast: filtered,
+            city: 'Denver',
+            state: 'Colorado'
           })
         })
       })
@@ -79,6 +81,8 @@ class App extends Component {
             this.setState({
               ...this.state,
               forecast: filtered,
+              city: cityChoice,
+              state: stateChoice
             })
           })
         })
@@ -95,6 +99,7 @@ class App extends Component {
     return (
       <>
       <Navbar />
+      <h1>{this.state.city}, {this.state.state}</h1>
       <Form handleUserChoice={this.handleUserChoice}/>
       <Route exact path='/' render = {() =>
       <>

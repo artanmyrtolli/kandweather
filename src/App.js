@@ -32,10 +32,10 @@ class App extends Component {
         cityData: data.data.states
       })
     })
-    
-    fetchAirQuality()
+
+    fetchAirQuality('denver', 'colorado')
     .then(data=> this.setState({
-      ...this.state, 
+      ...this.state,
       airData: data.data.current.pollution.aqius
     }))
 
@@ -51,25 +51,55 @@ class App extends Component {
           this.setState({
             ...this.state,
             forecast: filtered,
+            city: 'Denver',
+            state: 'Colorado'
           })
         })
       })
-      }
+  }
 
     handleUserChoice = (event, stateChoice, cityChoice) => {
       event.preventDefault()
       console.log('app fired', stateChoice, cityChoice)
+      fetchAirQuality(cityChoice, stateChoice)
+      .then(data=> {
+        console.log(data);
+        this.setState({
+        ...this.state,
+        airData: data.data.current.pollution.aqius
+      })
+      console.log(data.data.location);
+      fetch(`https://api.weather.gov/points/${data.data.location.coordinates[1].toFixed(4)},${data.data.location.coordinates[0].toFixed(4)}`)
+      .then(response => response.json())
+      .then(data => {
+        hourlyLinkContext = createContext(data.properties.forecastHourly)
+        fetch(data.properties.forecast)
+        .then(response => response.json())
+        .then(data => {
+          let filtered = data.properties.periods.filter(element => element.isDaytime).map((item, index) => {
+            return item = {...item, number:  index + 1}})
+            this.setState({
+              ...this.state,
+              forecast: filtered,
+              city: cityChoice,
+              state: stateChoice
+            })
+          })
+        })
+    })
     }
 
-      
+
+
   render () {
     // handleChoiceContext = createContext(this.handleUserChoice)
     cityContext = createContext(this.state.cityData)
-    airContext = createContext(this.state.airData)  
+    airContext = createContext(this.state.airData)
     weatherContext = createContext(this.state.forecast)
     return (
       <>
-      <Navbar />      
+      <Navbar />
+      <h1>{this.state.city}, {this.state.state}</h1>
       <Form handleUserChoice={this.handleUserChoice}/>
       <Route exact path='/' render = {() =>
       <>

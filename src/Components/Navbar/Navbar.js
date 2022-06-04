@@ -7,7 +7,7 @@ const Navbar = () => {
 
 return (
   <div className="navbar">
-    <h1>KandWeather</h1>
+    <h1>DANK Weather</h1>
     <NavLink to="/">
       <button className="home-btn">HOME</button>
     </NavLink>

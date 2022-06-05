@@ -7,7 +7,7 @@ const AQI = () => {
     const format = (value) => {
         return (
             <>
-            <p>The air quality index is: {`${value}`}</p>
+            <h2>The air quality index is: {`${value}`}</h2>
             </>
         )
     }

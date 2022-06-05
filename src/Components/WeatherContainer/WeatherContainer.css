@@ -1,0 +1,8 @@
+.weather-card-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+    margin: 20px;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { cityContext, handleChoiceContext } from '../../App'
-
+import "./Form.css"
 const Form = (props) => {
     // console.log(cityContext)
     let cities;
@@ -42,7 +42,7 @@ const Form = (props) => {
                     <option value='none'>Please select a city:</option>
                     {cities}
                 </select>
-                <button onClick={(event) => props.handleUserChoice(event, stateChoice, cityChoice)}>GO!</button>
+                <button onClick={(event) => props.handleUserChoice(event, stateChoice, cityChoice)}>Select!</button>
             </form>
         )
     }

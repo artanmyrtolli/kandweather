@@ -1,6 +1,22 @@
 form {
     display: flex;
-    width: 400px;
+    width: 800px;
     justify-content: space-around;
 }
 
+form button {
+    padding: 10px 20px;
+    font-size: 1.25em;
+    background-color: #2A37AD;
+    color: #E4E5F6;
+    box-shadow: inset 2px 2px 3px 1px lightblue,
+  2px 2px 3px 1px #1d1d1d;
+}
+
+select {
+    padding: 6px;
+    height: 50px;
+    width: 225px;
+    font-size: 1.25em;
+    background-color: #E4E5F6;
+}

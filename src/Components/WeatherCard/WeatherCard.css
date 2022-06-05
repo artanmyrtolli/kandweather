@@ -1,7 +1,7 @@
 
 .weatherCard-box {
-  width: 145px;
-  height: 350px;
+  width: 200px;
+  height: 375px;
   padding: 7px;
   border: 2px solid black;
   background-color: #E4E5F6;
@@ -10,7 +10,11 @@
   2px 2px 4px 2px #1d1d1d;
 }
 
+.weatherCard-box h2 {
+  font-size: 2em;
+}
+
 .weatherCard-box p {
   text-decoration: none;
-  font-size: .75em;
+  font-size: 1em;
 }

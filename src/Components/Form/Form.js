@@ -42,7 +42,7 @@ const Form = (props) => {
                     <option value='none'>Please select a city:</option>
                     {cities}
                 </select>
-                <button onClick={(event) => props.handleUserChoice(event, stateChoice, cityChoice)}>GO!</button>
+                <button onClick={(event) => props.handleUserChoice(event, stateChoice, cityChoice)}>Select!</button>
             </form>
         )
     }

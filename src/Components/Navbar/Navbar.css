@@ -17,7 +17,10 @@
 
 .navbar button {
   font-size: 1.5em;
+  padding: 5px;
   border: none;
   background-color: #2A37AD;
   color: #E4E5F6;
+  box-shadow: inset 2px 2px 3px 1px lightblue,
+  2px 2px 4px 2px #1d1d1d;
 }

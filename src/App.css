@@ -3,6 +3,10 @@
   text-decoration: none;
 }
 
+h1 {
+  font-size: 4em;
+}
+
 
 main {
   display: flex;
@@ -15,6 +19,9 @@ main {
     #BDF7FF;
 }
 
+main h1 {
+  font-size: 3em;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -54,3 +61,4 @@ main {
 button:hover {
   cursor: pointer;
 }
+

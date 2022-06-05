@@ -2,12 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { weatherContext } from "../../App";
 import  WeatherCard  from "../WeatherCard/WeatherCard"
+import "./WeatherContainer.css"
 
 const WeatherContainer = () => {
     const format = (value) => {
         return value.map(obj => {
             return (
-              <NavLink to={`/${obj.number}`} key={obj.number}>
+              <NavLink to={`/${obj.number}`} key={obj.number} className="nav-link">
                 <WeatherCard
                 name= {obj.name}
                 temp= {obj.temperature}
@@ -23,14 +24,11 @@ const WeatherContainer = () => {
     }
 
     return (
-      <>
-        <NavLink to="/24-hours">
-          <button className="24hr-btn">Next 24Hrs</button>
-        </NavLink>
+      <div className="weather-card-wrapper">
         <weatherContext.Consumer>
             {value => format(value)}
         </weatherContext.Consumer>
-      </>
+      </div>
     )
 }
 

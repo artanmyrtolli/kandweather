@@ -8,9 +8,14 @@ const Navbar = () => {
 return (
   <div className="navbar">
     <h1>DANK Weather</h1>
-    <NavLink to="/">
+    <div className="nav-buttons">
+    <NavLink to="/" className="nav-link">
       <button className="home-btn">HOME</button>
     </NavLink>
+    <NavLink to="/24-hours" className="nav-link">
+          <button className="24hr-btn">Next 24Hrs</button>
+    </NavLink>
+    </div>
   </div>
 )
 

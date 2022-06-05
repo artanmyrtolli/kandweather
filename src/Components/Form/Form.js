@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { cityContext, handleChoiceContext } from '../../App'
-
+import "./Form.css"
 const Form = (props) => {
     // console.log(cityContext)
     let cities;

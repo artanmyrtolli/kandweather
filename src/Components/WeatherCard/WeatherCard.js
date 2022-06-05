@@ -1,5 +1,6 @@
 import React from 'react';
 import './WeatherCard.css'
+
 const WeatherCard = (props) => {
   return (
     <div className="weatherCard-box">

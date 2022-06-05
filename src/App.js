@@ -97,24 +97,24 @@ class App extends Component {
     airContext = createContext(this.state.airData)
     weatherContext = createContext(this.state.forecast)
     return (
-      <>
+      <div className='app'>
       <Navbar />
+      <main>
       <h1>{this.state.city}, {this.state.state}</h1>
       <Form handleUserChoice={this.handleUserChoice}/>
       <Route exact path='/' render = {() =>
-      <>
-      <AQI />
-        <div className="App">
+        <>
           <WeatherContainer />
-        </div>
-      </>
+          <AQI />
+        </>
     }
-      />
+    />
       <Route exact path='/:number' render = {({ match }) =>
         <WeatherDetails number={ match.params.number } />
       }
       />
-      </>
+      </main>
+      </div>
     );
   }
 }

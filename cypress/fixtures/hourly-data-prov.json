@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    {
+      "@version": "1.1",
+      "wx": "https://api.weather.gov/ontology#",
+      "geo": "http://www.opengis.net/ont/geosparql#",
+      "unit": "http://codes.wmo.int/common/unit/",
+      "@vocab": "https://api.weather.gov/ontology#"
+    }
+  ],
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-71.4227461, 41.8221817],
+        [-71.4278101, 41.800695000000005],
+        [-71.3989917, 41.796919100000004],
+        [-71.39392169999999, 41.818405500000004],
+        [-71.4227461, 41.8221817]
+      ]
+    ]
+  },
+  "properties": {
+    "updated": "2022-06-05T22:38:40+00:00",
+    "units": "us",
+    "forecastGenerator": "HourlyForecastGenerator",
+    "generatedAt": "2022-06-06T01:18:43+00:00",
+    "updateTime": "2022-06-05T22:38:40+00:00",
+    "validTimes": "2022-06-05T16:00:00+00:00/P8DT6H",
+    "elevation": {
+      "unitCode": "wmoUnit:m",
+      "value": 6.096
+    },
+    "periods": [
+      {
+        "number": 1,
+        "name": "",
+        "startTime": "2022-06-05T21:00:00-04:00",
+        "endTime": "2022-06-05T22:00:00-04:00",
+        "isDaytime": false,
+        "temperature": 65,
+        "temperatureUnit": "F",
+        "temperatureTrend": null,
+        "windSpeed": "5 mph",
+        "windDirection": "SW",
+        "icon": "https://api.weather.gov/icons/land/night/few?size=small",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": ""
+      },
+      {
+        "number": 2,
+        "name": "",
+        "startTime": "2022-06-05T22:00:00-04:00",
+        "endTime": "2022-06-05T23:00:00-04:00",
+        "isDaytime": false,
+        "temperature": 62,
+        "temperatureUnit": "F",
+        "temperatureTrend": null,
+        "windSpeed": "3 mph",
+        "windDirection": "W",
+        "icon": "https://api.weather.gov/icons/land/night/few?size=small",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": ""
+      },
+      {
+        "number": 3,
+        "name": "",
+        "startTime": "2022-06-05T23:00:00-04:00",
+        "endTime": "2022-06-06T00:00:00-04:00",
+        "isDaytime": false,
+        "temperature": 60,
+        "temperatureUnit": "F",
+        "temperatureTrend": null,
+        "windSpeed": "3 mph",
+        "windDirection": "W",
+        "icon": "https://api.weather.gov/icons/land/night/few?size=small",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": ""
+      },
+      {
+        "number": 4,
+        "name": "",
+        "startTime": "2022-06-06T00:00:00-04:00",
+        "endTime": "2022-06-06T01:00:00-04:00",
+        "isDaytime": false,
+        "temperature": 58,
+        "temperatureUnit": "F",
+        "temperatureTrend": null,
+        "windSpeed": "3 mph",
+        "windDirection": "W",
+        "icon": "https://api.weather.gov/icons/land/night/few?size=small",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": ""
+      },
+      {
+        "number": 5,
+        "name": "",
+        "startTime": "2022-06-06T01:00:00-04:00",
+        "endTime": "2022-06-06T02:00:00-04:00",
+        "isDaytime": false,
+        "temperature": 56,
+        "temperatureUnit": "F",
+        "temperatureTrend": null,
+        "windSpeed": "3 mph",
+        "windDirection": "NW",
+        "icon": "https://api.weather.gov/icons/land/night/few?size=small",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": ""
+      },
+      {
+        "number": 6,
+        "name": "",
+        "startTime": "2022-06-06T02:00:00-04:00",
+        "endTime": "2022-06-06T03:00:00-04:00",
+        "isDaytime": false,
+        "temperature": 55,
+        "temperatureUnit": "F",
+        "temperatureTrend": null,
+        "windSpeed": "2 mph",
+        "windDirection": "N",
+        "icon": "https://api.weather.gov/icons/land/night/few?size=small",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": ""
+      }
+    ]
+  }
+}

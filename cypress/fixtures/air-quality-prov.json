@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "data": {
+    "city": "Providence",
+    "state": "Rhode Island",
+    "country": "USA",
+    "location": {
+      "type": "Point",
+      "coordinates": [-71.415, 41.8081]
+    },
+    "current": {
+      "pollution": {
+        "ts": "2022-06-06T01:00:00.000Z",
+        "aqius": 11,
+        "mainus": "p2",
+        "aqicn": 4,
+        "maincn": "p2"
+      },
+      "weather": {
+        "ts": "2022-06-06T01:00:00.000Z",
+        "tp": 16,
+        "pr": 1011,
+        "hu": 65,
+        "ws": 2.06,
+        "wd": 200,
+        "ic": "02n"
+      }
+    }
+  }
+}

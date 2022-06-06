@@ -4,21 +4,13 @@ import airQualityKey from '../../assets/images/airQualityKey.png'
 import "./AQI.css"
 
 const AQI = () => {
-    const format = (value) => {
-        return (
-            <>
-            <h2>The air quality index is: {`${value}`}</h2>
-            </>
-        )
-    }
     return (
         <div className="aqi-wrapper">
-        {airContext && 
-            <airContext.Consumer>
-                {value => format(value)}
-            </airContext.Consumer>
-        }
-        <img className="aqi-key" src={airQualityKey}/>
+            {airContext && 
+                <airContext.Consumer>
+                    {value => <h2>The air quality index is: {`${value}`}</h2>}
+                </airContext.Consumer> }
+            <img className="aqi-key" src={airQualityKey}/>
         </div>
     )
 }

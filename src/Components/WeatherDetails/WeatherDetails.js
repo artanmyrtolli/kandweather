@@ -31,13 +31,10 @@ fetchHourly = (value) => {
           hourlyArray:filtered,
           fetched:true
         })
-  })
-}
-
-
+    })
+  } 
 
   render(){
-
     return (
       <div className='details-wrapper'>
       {this.state.fetched ? "" :

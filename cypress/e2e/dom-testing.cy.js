@@ -14,35 +14,59 @@ describe('dom-testing.cy.js', () => {
     cy.intercept('GET', 'https://api.weather.gov/gridpoints/BOU/62,61/forecast/hourly', {fixture: 'hourly-data-den'})
     cy.intercept('GET', 'https://api.weather.gov/gridpoints/BOX/63,49/forecast/hourly', {fixture: 'hourly-data-prov'})
 
-    cy.visit('http://localhost:3000/')
-  })
-    it('Should have a Header that displays KAND Weather', () => {
-    cy.get('h1').contains('KAND Weather')
+    cy.visit('http://localhost:3000/').wait(2000)
   })
 
-    it('Should show Denver, Colorado as the home city on page load', () => {
-    cy.get('main h1').contains('Denver, Colorado')
+    it('Should have a Header that displays KAND Weather', () => {
+      cy.get('h1').contains('KAND Weather')
     })
 
-    it('Should have 7 weather cards', () => {
-    cy.get('.weatherCard-box').should('have.length', 7)
+    it('Should show Denver, Colorado as the home city on page load', () => {
+      cy.get('main h1').contains('Denver, Colorado')
+    })
+
+    it('Should have 7 weather cards for Denver', () => {
+      cy.get('.weatherCard-box').should('have.length', 7)
     })
 
     it('Should display air quality index for Denver', () => {
-    cy.get('.aqi-wrapper h2').should('exist')
+      cy.get('.aqi-wrapper h2').should('exist')
     })
 
     it('Should get the next 24 hours weather info on click of the 24 hour button', () => {
-    cy.get('.nav-link').eq(1).click()
-    cy.get('.hour-details').should('have.length', 6)
+      cy.get('.nav-link').eq(1).click()
+      cy.get('.hour-details').should('have.length', 6)
     })
 
-    it.only('Should display Providence, Rhode Island when City and State are selected from the drop downs', () => {
+    it('Should display Providence, Rhode Island when City and State are selected from the drop downs', () => {
     // cy.get('main h1').contains('Providence, Rhode Island')
-    cy.get('select').should('have.length', 2)
-    cy.get('select').first().select(1)
-    // cy.get('select').last().select(2)
-    // cy.get('form button').click()
+      cy.get('select').should('have.length', 2)
+      cy.get('select').first().select(1)
+      cy.get('select').last().select(5)
+      cy.get('form button').click()
+      cy.get('main h1').contains('Providence, Rhode Island')
+    })
+
+    it('Should have 7 weather cards for Rhode Island', () => {
+      cy.get('select').first().select(1)
+      cy.get('select').last().select(5)
+      cy.get('form button').click()
+      cy.get('.weatherCard-box').should('have.length', 7)
+    })
+
+    it('Should display air quality index for Rhode Island', () => {
+      cy.get('select').first().select(1)
+      cy.get('select').last().select(5)
+      cy.get('form button').click()
+      cy.get('.aqi-wrapper h2').should('exist')
+    })
+
+    it('Should get the next 24 hours weather info on click of the 24 hour button', () => {
+      cy.get('select').first().select(1)
+      cy.get('select').last().select(5)
+      cy.get('form button').click()
+      cy.get('.nav-link').eq(1).click()
+      cy.get('.hour-details').should('have.length', 6)
     })
 
 })

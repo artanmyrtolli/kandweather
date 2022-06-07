@@ -32,16 +32,22 @@ fetchHourly = (value) => {
           fetched:true
         })
     })
+    .catch(err => {
+      console.log('so done with this project')
+    })
   } 
 
   render(){
+    console.log('hi')
     return (
       <div className='details-wrapper'>
-      {this.state.fetched ? "" :
-      <hourlyLinkContext.Consumer>
-        {value => this.fetchHourly(value)}
-      </hourlyLinkContext.Consumer>
+      
+      {(hourlyLinkContext && !this.state.fetched) &&
+        <hourlyLinkContext.Consumer>
+         {value => this.fetchHourly(value)}
+        </hourlyLinkContext.Consumer>
       }
+      
       {this.state.hourlyArray}
       </div>
     )

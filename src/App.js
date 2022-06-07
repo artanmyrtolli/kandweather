@@ -92,13 +92,13 @@ class App extends Component {
        <Navbar />
         <main>
           <h1>{this.state.city}, {this.state.state}</h1>
-          <Form handleUserChoice={this.handleUserChoice}/>
           <Route exact path='/' render = {() =>
             <>
+            <Form handleUserChoice={this.handleUserChoice}/>
               <WeatherContainer />
               <AQI />
             </> }/>
-          <Route exact path='/:number' render = {({ match }) =>
+          <Route path='/:number' render = {({ match }) =>
             <WeatherDetails number={ match.params.number } /> }/>
         </main>
       </div>

@@ -1,6 +1,6 @@
 const fetchCityData = () => {
-    return fetch('http://localhost:3001/api/v1/city-data')
-            .then(response => response.json())
+    return fetch('https://mighty-taiga-50595.herokuapp.com/')
+        .then(response => response.json())
 }
 
 const fetchAirQuality = (city, state) => {

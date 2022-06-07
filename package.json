@@ -2,11 +2,13 @@
   "name": "stretch",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://artanmyrtolli.github.io/kand-weather/",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-async": "^10.0.1",
     "react-dom": "^18.1.0",
@@ -16,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "cypress": "./node_modules/.bin/cypress open",
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -92,7 +92,7 @@ class App extends Component {
        <Navbar />
         <main>
           <h1>{this.state.city}, {this.state.state}</h1>
-          <Route exact path='/kand-weather' render = {() =>
+          <Route exact path='/kandweather' render = {() =>
             <>
             <Form handleUserChoice={this.handleUserChoice}/>
               <WeatherContainer />

@@ -18,9 +18,12 @@
 [Github Repo](https://github.com/artanmyrtolli/kandweather)
 
 ## Demo
-https://user-images.githubusercontent.com/92772785/172289617-17b4b317-9343-4d1b-97f4-bbca25151251.gif
 
+![kand-homepage](https://user-images.githubusercontent.com/92772785/172290040-0f530f20-3ee3-4f8c-91d3-46b280097722.gif)
 
+![kand-details](https://user-images.githubusercontent.com/92772785/172290053-6836b49d-da35-4047-b915-c4d978e77c91.gif)
+
+![kand-selects](https://user-images.githubusercontent.com/92772785/172290057-e202a9a8-2c53-4a43-86dc-c037186e17bd.gif)
 
 
 ## Project Spec -

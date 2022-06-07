@@ -38,7 +38,6 @@ fetchHourly = (value) => {
   } 
 
   render(){
-    console.log('hi')
     return (
       <div className='details-wrapper'>
       

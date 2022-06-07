@@ -33,7 +33,7 @@ fetchHourly = (value) => {
         })
     })
     .catch(err => {
-      console.log('so done with this project')
+      console.log('Error' , `${err}`)
     })
   } 
 

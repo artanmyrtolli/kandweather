@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Kand Weather - Group Context API Project
+## Contents
+* [Deployed App](#deployed-app)
+* [Github Repo](#github-repo)
+* [Demo](#demo)
+* [Project Spec](#project-spec)
+* [Operating Instructions](#operating-instructions)
+* [Setup Instructions](#setup-instructions)
+* [Learning Goals and Reflections](#learning-goals-and-reflections)
+* [Future Additions](#future-additions)
+* [Contributors](#contributors)
+* [Project Manager](#project-manager)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed App -
+[Deployed App](https://artanmyrtolli.github.io/kandweather/)
 
-## Available Scripts
+## Github Repo -
+[Github Repo](https://github.com/artanmyrtolli/kandweather)
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+![kand-homepage](https://user-images.githubusercontent.com/92772785/172290040-0f530f20-3ee3-4f8c-91d3-46b280097722.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![kand-details](https://user-images.githubusercontent.com/92772785/172290053-6836b49d-da35-4047-b915-c4d978e77c91.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![kand-selects](https://user-images.githubusercontent.com/92772785/172290057-e202a9a8-2c53-4a43-86dc-c037186e17bd.gif)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Spec -
+[Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
-### `npm run build`
+## Instructions
+* The purpose of the **Kand Weather App** is to help a user find the weather in their home city or a city they plan to visit. It also has the Air Quality Index, (AQI), listed so they can decide whether they feel comfortable going outside for a walk, hike, etc... Or whether it would be better to stay inside.
+* The home page defaults to Denver, Colorado. From there the user can either click on a link for a more detailed hourly breakdown of the weather, or select a different State and City to get the information for that destination.
+* The newly selected City appears on a new page with the 7 day weather view and AQI information.
+* The user can also select the more detailed 24 hour forecast for that City if they wish.
+* The user can go back to the home page by clicking the "HOME" button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions
+To run the application on a local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Clone down repository
+* cd into repository
+* Run npm install
+* Run npm start
+* Webpage will open in separate browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used:
+* Github
+* Context API
+* React
+* HTML5
+* CSS
+* Cypress
+* Router
+* Heroku Deployment
+* Github Pages
 
-### `npm run eject`
+## Learning Goals and Project Reflections
+### Learning Goals
+* Self teach and understanding of React Context API
+* Practice using hooks
+* Strengthen group dynamics
+* Create local server using express
+* Deploy local back-end and React App
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Wins
+* Good team effort, very harmonious
+* Fundamental understanding of Context API and basic hooks
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Challenges
+* Self teaching a new technology while also trying to develop a better understanding of React
+* Balance between time for other essential activities, (sleep, ideabox, etc..) and the desire to build a quality application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Additions
+* Fire Risk Display
+* More in depth weather data - projected pressure, dew point, etc...
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributors
+* [Kevin King](https://github.com/King13k)
+* [Artan Myrtolli](https://github.com/artanmyrtolli)
+* [Nathan Hodnett](https://github.com/nhodnett)
+* [Dylan Duke](https://github.com/laytonmaes)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Manager
+* Robbie Jaeger

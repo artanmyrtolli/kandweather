@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kand-weather/static/css/main.41732cbe.css",
-    "main.js": "/kand-weather/static/js/main.d128e538.js",
-    "static/js/787.4299044b.chunk.js": "/kand-weather/static/js/787.4299044b.chunk.js",
-    "static/media/airQualityKey.png": "/kand-weather/static/media/airQualityKey.fd483130166137290c20.png",
-    "index.html": "/kand-weather/index.html",
-    "main.41732cbe.css.map": "/kand-weather/static/css/main.41732cbe.css.map",
-    "main.d128e538.js.map": "/kand-weather/static/js/main.d128e538.js.map",
-    "787.4299044b.chunk.js.map": "/kand-weather/static/js/787.4299044b.chunk.js.map"
+    "main.css": "/kandweather/static/css/main.41732cbe.css",
+    "main.js": "/kandweather/static/js/main.aba54609.js",
+    "static/js/787.4299044b.chunk.js": "/kandweather/static/js/787.4299044b.chunk.js",
+    "static/media/airQualityKey.png": "/kandweather/static/media/airQualityKey.fd483130166137290c20.png",
+    "index.html": "/kandweather/index.html",
+    "main.41732cbe.css.map": "/kandweather/static/css/main.41732cbe.css.map",
+    "main.aba54609.js.map": "/kandweather/static/js/main.aba54609.js.map",
+    "787.4299044b.chunk.js.map": "/kandweather/static/js/787.4299044b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41732cbe.css",
-    "static/js/main.d128e538.js"
+    "static/js/main.aba54609.js"
   ]
 }

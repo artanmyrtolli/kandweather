@@ -7,10 +7,10 @@ const Navbar = () => {
     <div className="navbar">
       <h1>KAND Weather</h1>
       <div className="nav-buttons">
-      <NavLink to="/" className="nav-link">
+      <NavLink to="/kand-weather" className="nav-link">
         <button className="home-btn">HOME</button>
       </NavLink>
-      <NavLink to="/24-hours" className="nav-link">
+      <NavLink to="/details/24-hours" className="nav-link">
             <button className="24hr-btn">Next 24Hrs</button>
       </NavLink>
       </div>

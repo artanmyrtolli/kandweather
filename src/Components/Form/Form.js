@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { cityContext, handleChoiceContext } from '../../App'
+import { cityContext } from '../../App'
 import "./Form.css"
+
 const Form = (props) => {
-    // console.log(cityContext)
     let cities;
     const [stateChoice, setStateChoice] = useState('')
     const [cityChoice, setCityChoice] = useState('')
-    console.log(stateChoice, cityChoice)
 
     const dropDowns = (value) => {
         let states = value.map(obj => {
@@ -24,14 +23,6 @@ const Form = (props) => {
                 })
             }
 
-        
-        
-    
-    // const selectState = (event) => {
-    //     console.log(event.target.value);
-    //     setStateChoice(event.target.value)
-    //     console.log(stateChoice)
-    // }
         return (
             <form>
                 <select onChange={(event) => setStateChoice(event.target.value)}>

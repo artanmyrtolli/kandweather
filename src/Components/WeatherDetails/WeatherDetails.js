@@ -31,20 +31,22 @@ fetchHourly = (value) => {
           hourlyArray:filtered,
           fetched:true
         })
-  })
-}
-
-
+    })
+    .catch(err => {
+      console.log('Error' , `${err}`)
+    })
+  } 
 
   render(){
-
     return (
       <div className='details-wrapper'>
-      {this.state.fetched ? "" :
-      <hourlyLinkContext.Consumer>
-        {value => this.fetchHourly(value)}
-      </hourlyLinkContext.Consumer>
+      
+      {(hourlyLinkContext && !this.state.fetched) &&
+        <hourlyLinkContext.Consumer>
+         {value => this.fetchHourly(value)}
+        </hourlyLinkContext.Consumer>
       }
+      
       {this.state.hourlyArray}
       </div>
     )

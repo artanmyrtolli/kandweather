@@ -12,8 +12,6 @@ export let weatherContext;
 export let hourlyLinkContext;
 export let airContext;
 export let cityContext;
-// export let handleChoiceContext;
-
 
 class App extends Component {
   constructor(){
@@ -26,7 +24,6 @@ class App extends Component {
   }
   componentDidMount() {
     fetchCityData().then(data => {
-      // console.log(data.data.states)
       this.setState({
         ...this.state,
         cityData: data.data.states
@@ -60,15 +57,12 @@ class App extends Component {
 
     handleUserChoice = (event, stateChoice, cityChoice) => {
       event.preventDefault()
-      console.log('app fired', stateChoice, cityChoice)
       fetchAirQuality(cityChoice, stateChoice)
       .then(data=> {
-        console.log(data);
         this.setState({
         ...this.state,
         airData: data.data.current.pollution.aqius
       })
-      console.log(data.data.location);
       fetch(`https://api.weather.gov/points/${data.data.location.coordinates[1].toFixed(4)},${data.data.location.coordinates[0].toFixed(4)}`)
       .then(response => response.json())
       .then(data => {
@@ -89,31 +83,24 @@ class App extends Component {
     })
     }
 
-
-
   render () {
-    // handleChoiceContext = createContext(this.handleUserChoice)
     cityContext = createContext(this.state.cityData)
     airContext = createContext(this.state.airData)
     weatherContext = createContext(this.state.forecast)
     return (
       <div className='app'>
-      <Navbar />
-      <main>
-      <h1>{this.state.city}, {this.state.state}</h1>
-      <Form handleUserChoice={this.handleUserChoice}/>
-      <Route exact path='/' render = {() =>
-        <>
-          <WeatherContainer />
-          <AQI />
-        </>
-    }
-    />
-      <Route exact path='/:number' render = {({ match }) =>
-        <WeatherDetails number={ match.params.number } />
-      }
-      />
-      </main>
+       <Navbar />
+        <main>
+          <h1>{this.state.city}, {this.state.state}</h1>
+          <Route exact path='/' render = {() =>
+            <>
+            <Form handleUserChoice={this.handleUserChoice}/>
+              <WeatherContainer />
+              <AQI />
+            </> }/>
+          <Route path='/:number' render = {({ match }) =>
+            <WeatherDetails number={ match.params.number } /> }/>
+        </main>
       </div>
     );
   }

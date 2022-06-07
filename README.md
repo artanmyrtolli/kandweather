@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# KAND Weather - Group Context API Project
+## Contents
+* Github Repo
+* Demo
+* Project Spec
+* Operating Instructions
+* Setup Instructions
+* Learning Goals and Reflections
+* Future Additions
+* Contributors
+* Project Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Github Repo
+[Repo](https://github.com/artanmyrtolli/stretch)
 
-## Available Scripts
+## Project Spec
+[Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
-In the project directory, you can run:
+## Instructions
+* The purpose of the KAND Weather App is to help a user find the weather in their home city or a city they plan to visit. It also has the Air Quality Index listed so they can decide whether they feel comfortable going outside for a walk, hike, etc... Or whether it would be better to stay in side and drink Margaritas...
+* The home page defaults to Denver, Colorado. From there the user can either click on a link for a more detailed 24 hour view of the weather, or select a different State and City to get the information for that destination.
+* The selected City appears on a new page with the 7 day weather, and AQI.
+* The user can also select a more detailed 24 hour forecast.
+* The user can go back to the home page by clicking the "HOME" button.
 
-### `npm start`
+## Setup Instructions
+To run the application on a local machine:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Clone down repository
+* cd into repository
+* Run npm install
+* Run npm start
+* Webpage will open in separate browser
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used:
+* Context API
+* React
+* HTML5
+* CSS
+* Cypress
+* Router
 
-### `npm test`
+## Learning Goals and Project Reflections
+### Learning Goals
+* Self teach and understanding of React Context api
+* Practice using hooks
+* Strengthen group dynamics
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Wins
+* Good team effort, very harmonious
+* Fundamental understanding of Context api and basic hooks
 
-### `npm run build`
+### Challenges
+* Self teaching a new technology while also trying to develop a better understanding of React
+* Balance between time for other essential activities, (sleep, ideabox, etc..) and the desire to build a quality application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Additions
+* Fire Risk Display
+* More in depth weather data - projected pressure, dew point, etc...
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributors
+* [Kevin King](https://github.com/King13k)
+* [Artan Myrtolli](https://github.com/artanmyrtolli)
+* [Nathan Hodnett](https://github.com/nhodnett)
+* [Dylan Duke](https://github.com/laytonmaes)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Manager
+* Robbie Jaeger
